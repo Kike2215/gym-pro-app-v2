@@ -1385,6 +1385,7 @@
             renderDaysNav();
         }
 
+        // AÑADE UN EJERCICIO 100% EN BLANCO A LA RUTINA
         function addExerciseToDay(dIdx) {
             appData.routine.days[dIdx].exercises.push({ name: "", target: "3x12", category: "Compuesto Heavy" });
             saveToStorage();
@@ -1573,7 +1574,7 @@
             document.getElementById('modal-suggestions').classList.add('hidden');
             document.getElementById('modal-search-input').value = exName;
             
-            const currentDay = appData.routine.days.find(d => d.id === appData.activeDayId);
+            const currentDay = appData.routine.days ? appData.routine.days.find(d => d.id === appData.activeDayId) : null;
             let activeExInDay = currentDay ? currentDay.exercises.find(e => e.name === exName) : null;
 
             if (exName) {
@@ -1636,7 +1637,7 @@
                 appData.library.push({ name, category, settings, recommendations, errors });
             }
 
-            const currentDay = appData.routine.days.find(d => d.id === appData.activeDayId);
+            const currentDay = appData.routine.days ? appData.routine.days.find(d => d.id === appData.activeDayId) : null;
             if (currentDay) {
                 const exInDay = currentDay.exercises.find(e => e.name === name);
                 if (exInDay) {
