@@ -713,7 +713,7 @@
             { name: "Sentadilla Guiada Frontal en Multipower (Smith)", category: "Compuesto Heavy", settings: "Barra cruzada sobre hombros anteriores", recommendations: "Descender manteniendo el torso totalmente vertical.", errors: "Dejar caer el torso hacia el frente." },
             { name: "Sentadilla Guiada Trasera en Multipower (Smith)", category: "Compuesto Heavy", settings: "Barra sobre trapecios", recommendations: "Bajar la cadera hasta romper el paralelo de 90°.", errors: "Despegar los talones del suelo." },
             { name: "Prensa Inclinada con Pies Bajos", category: "Compuesto Heavy", settings: "Pies situados en la parte baja de la plataforma", recommendations: "Bajar enfocando el trabajo en la cara anterior del cuádriceps (vasto).", errors: "Despegar los talones por falta de movilidad de tobillo." },
-            { name: "Extensiones Isométricas de Cuádriceps", category: "Piernas", settings: "Sostener al final del recorrido", recommendations: "Mantener las piernas totalmente extendidas 3 segundos arriba.", errors: "Usar peso excesivo que impida el bloqueo sostenido." },
+            { name: "Extensiones Isométricas de Cuádriceps", category: "Piernas", settings: "Sostener al final del recorrido", recommendations: "Mantener las piernas totalmente extendidas 3 segundos arriba.", errors: "Usar peso excesivo que impida el bloqueo sustained." },
             { name: "Sentadilla Búlgara en Multipower (Smith)", category: "Piernas", settings: "Pie trasero elevado en banco", recommendations: "Bajar la cadera sobre la pierna delantera con la barra guiada.", errors: "Inclinar en exceso la rodilla hacia adentro." },
             { name: "Step-Up (Subidas a Cajón/Plataforma) en Multipower", category: "Piernas", settings: "Un pie sobre la plataforma", recommendations: "Subir empujando exclusivamente con la pierna de arriba.", errors: "Dar un salto con la pierna de abajo." },
             { name: "Sentadilla Sumo en Belt Squat", category: "Compuesto Heavy", settings: "Pies bien abiertos con puntas hacia afuera", recommendations: "Descender abriendo rodillas en la misma dirección de los pies.", errors: "Dejar que las rodillas colapsen hacia el centro." },
@@ -1224,7 +1224,7 @@
                 const typedarray = new Uint8Array(this.result);
 
                 if (typeof pdfjsLib === 'undefined') {
-                    return showToast("⚠️ PDF.js no disponible. Revisa tu conexión.");
+                    return showToast("⚠️️ PDF.js no disponible. Revisa tu conexión.");
                 }
 
                 pdfjsLib.getDocument(typedarray).promise.then(pdf => {
@@ -2126,6 +2126,6 @@
             switchTab('users');
         };
     </script>
+    <script src="gympro-fixes.js"></script>
 </body>
 </html>
- 
